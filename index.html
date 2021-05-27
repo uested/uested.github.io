@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <!-- HIGHCHARTS SCRIPT -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/bullet.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+
+
+
+
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+ -->
+
+
+
+    <script type="module" src="https://d3js.org/d3.v6.min.js"></script>
+
+
+
+
+    <link href="style.css" rel="stylesheet">
+
+    <script src="script.js"></script>
+
+
+
+    <title>Understanding Economic Success Through Education</title>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-0">
+        <div class="flex-row d-flex">
+            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas"
+                title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <a class="navbar-brand align-middle" href="#"> <img src="dashboardLogo.png" alt="dashboard logo"
+                    style="width:40px;height:40px;margin-right:10px;"> <b>  Understanding Economic Success Through Education Dashboard
+                </b></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://data.worldbank.org/country"> Data </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container-fluid  " id="main">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-md-3 col-lg-2 sidebar-offcanvas pl-0" id="sidebar" role="navigation">
+                <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+
+
+                    <li class="nav-item pl-2 mb-2 mr-0 pr-0  mt-3 pt-3">
+
+                        <label for="selectCountry"> Chose a country or income group: </label>
+
+                        <input list="selecCountry2" onfocus="this.value=''" onchange="this.blur();" value="all"
+                            name="browser" id="selectCountry" class="selectStyle">
+                        <datalist name="selectCountry" id="selecCountry2">
+                            <option value="all">all </option>
+                            <option value="High Income">High Income </option>
+                            <option value="Medium Income">Medium Income </option>
+                            <option value="Low Income">Low Income </option>
+
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Aruba">Aruba</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas, The">Bahamas, The</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="British Virgin Islands">British Virgin Islands</option>
+                            <option value="Brunei Darussalam">Brunei Darussalam</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Cayman Islands">Cayman Islands</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Channel Islands">Channel Islands</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo, Dem. Rep.">Congo, Dem. Rep.</option>
+                            <option value="Congo, Rep.">Congo, Rep.</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Curacao">Curacao</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Eswatini">Eswatini</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Faroe Islands">Faroe Islands</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="French Polynesia">French Polynesia</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia, The">Gambia, The</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Gibraltar">Gibraltar</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong SAR, China">Hong Kong SAR, China</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Isle of Man">Isle of Man</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
+                            <option value="Korea, Rep.">Korea, Rep.</option>
+                            <option value="Kosovo">Kosovo</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyz Republic">Kyrgyz Republic</option>
+                            <option value="Lao PDR">Lao PDR</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Macao SAR, China">Macao SAR, China</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia, Fed. Sts.">Micronesia, Fed. Sts.</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montenegro">Montenegro</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Caledonia">New Caledonia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Macedonia">North Macedonia</option>
+                            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russian Federation">Russian Federation</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+                            <option value="Slovak Republic">Slovak Republic</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="St. Kitts and Nevis">St. Kitts and Nevis</option>
+                            <option value="St. Lucia">St. Lucia</option>
+                            <option value="St. Martin (French part)">St. Martin (French part)</option>
+                            <option value="St. Vincent and the Grenadines">St. Vincent and the Grenadines</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-Leste">Timor-Leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Venezuela, RB">Venezuela, RB</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+                            <option value="West Bank and Gaza">West Bank and Gaza</option>
+                            <option value="Yemen, Rep.">Yemen, Rep.</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </datalist>
+
+
+
+
+                    </li>
+
+
+
+
+
+                    <li class="nav-item ml-3">
+
+                        <label for="start">Start date:</label>
+
+
+                        <input id="startDate" name="trip-start" value="1970" title="please pick from 1970 - 2019 ">
+
+                        <label for="trip-start" title="please pick from 1970 - 2019">End date:</label>
+
+
+
+                        <input id="endDate" name="trip-start" value="2019">
+
+                        <button type="button" onClick="changeCountries2()" class="mt-4 btn btn-secondary"> Change Dates
+                        </button>
+
+
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+
+
+                        <!-- <input type="date" id="startDate" name="trip-start"
+                    value="1977-05-23"  min="1970-1-1" >
+                    
+                    
+
+                    <input type="date" id="endDate" name="trip-start"
+                    value="2020-12-31"   max="2020-12-31"> -->
+
+
+
+                        <!-- <div id="time-range ">
+                            <div class="sliders_step1">
+                                <div id="slider-range"></div>
+                            </div>
+
+                            <p> <b> Start Date: </b> <span id="startDate" class="slider-time"> </span> </p>
+
+                            <p> <b>End Date: </b> <span id="endDate" class="slider-time2"> </span>
+                            </p>
+
+
+                        </div> -->
+
+
+
+                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Code </a></li> -->
+                </ul>
+            </div>
+            <!--/col-->
+
+            <br><br> 
+
+            <div class="col main pt-5 mt-3">
+
+
+
+
+                <div class="card-group mt-5">
+                    <div class="card  mx-3">
+                        <div class="card-body">
+                            <h5 class="card-title"> Average GNI </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> Average GNI per capita, Atlas method (current
+                                US$)
+                                <span id="currdates1"> </span>
+                            </h6>
+                            <p class="card-number" id="gniCard"></p>
+                        </div>
+                    </div>
+
+                    <div class="card  mx-3">
+                        <div class="card-body">
+                            <h5 class="card-title"> Average School Enrollment </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> School enrollment, tertiary (% gross)
+                                <span id="currdates2"> </span>
+
+                            </h6>
+                            <p class="card-number" id="totalEnrollment"></p>
+                        </div>
+                    </div>
+
+                    <div class="card  mx-3">
+                        <div class="card-body">
+                            <h5 class="card-title"> Average Female School Enrollment </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">School enrollment, tertiary, female (% gross)
+                                <span id="currdates3"> </span>
+                            </h6>
+                            <p class="card-number" id="totalFemaleEnrollment"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-3">
+
+
+                </div>
+                <!--/row-->
+
+
+
+                <div class="row justify-content-md-center align-items-start">
+
+                    <div class="col-7">
+
+
+                    </div>
+                    <div class="col-5 ">
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+
+                <!-- <div class="row  justify-content-md-center align-items-start">
+                    <div class="col-sm-8">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+                <div class="row">
+
+
+
+                    <div class="col main ">
+
+
+
+                        <div class="card-group">
+
+                            <div class="col-sm-7">
+
+
+                                <div class="card  mx-3">
+                                    <div class="card-body">
+
+                                        <div id="gniChart"></div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-sm-5">
+
+
+
+
+                                <div class="card ">
+                                    <div class="card-body">
+
+
+                                        
+                                        <label for="selectFeature"> Chose a feature: </label>
+
+                                        <input list="inputFeature2" onfocus="this.value=''" onchange="this.blur();" value="School enrollment, tertiary (% gross)"
+                                            name="browser" id="selectFeature" class="selectFeatureStyle">
+                                        <datalist name="selectFeature" id="inputFeature2">
+                                            <option value = "School enrollment, tertiary (% gross)">School enrollment, tertiary (% gross)</option>
+                                            <option value = "School enrollment, tertiary, female (% gross)">School enrollment, tertiary, female (% gross)</option>
+                                            <!-- <option value = "GNI per capita, Atlas method (current US$)">GNI per capita, Atlas method (current US$)</option> -->
+                                            <option value = "Literacy rate, adult female (% of females ages 15 and above)">Literacy rate, adult female (% of females ages 15 and above)</option>
+                                            <option value = "Literacy rate, adult male (% of males ages 15 and above)">Literacy rate, adult male (% of males ages 15 and above)</option>
+                                            <option value = "Literacy rate, adult total (% of people ages 15 and above)">Literacy rate, adult total (% of people ages 15 and above)</option>
+                                            <option value = "Literacy rate, youth male (% of males ages 15-24)">Literacy rate, youth male (% of males ages 15-24)</option>
+                                            <option value = "Literacy rate, youth total (% of people ages 15-24)">Literacy rate, youth total (% of people ages 15-24)</option>
+                                            <option value = "Public spending on education, total (% of GDP)">Public spending on education, total (% of GDP)</option>
+                                            <option value = "Ratio of school attendance of orphans to school attendance of non-orphans ages 10-14">Ratio of school attendance of orphans to school attendance of non-orphans ages 10-14</option>
+                                            <option value = "Ratio of young literate females to males (% ages 15-24)">Ratio of young literate females to males (% ages 15-24)</option>
+                                            <option value = "School enrollment, primary (% gross)">School enrollment, primary (% gross)</option>
+                                            <option value = "School enrollment, primary (% net)">School enrollment, primary (% net)</option>
+                                            <option value = "School enrollment, primary, female (% gross)">School enrollment, primary, female (% gross)</option>
+                                            <option value = "School enrollment, primary, female (% net)">School enrollment, primary, female (% net)</option>
+                                            <option value = "School enrollment, primary, male (% gross)">School enrollment, primary, male (% gross)</option>
+                                            <option value = "School enrollment, primary, male (% net)">School enrollment, primary, male (% net)</option>
+                                            <option value = "School enrollment, secondary (% gross)">School enrollment, secondary (% gross)</option>
+                                            <option value = "School enrollment, secondary (% net)">School enrollment, secondary (% net)</option>
+                                            <option value = "School enrollment, secondary, female (% gross)">School enrollment, secondary, female (% gross)</option>
+                                            <option value = "School enrollment, secondary, female (% net)">School enrollment, secondary, female (% net)</option>
+                                            <option value = "School enrollment, secondary, male (% gross)">School enrollment, secondary, male (% gross)</option>
+                                            <option value = "School enrollment, secondary, male (% net)">School enrollment, secondary, male (% net)</option>
+          
+                                            </datalist>
+
+
+
+                                            
+                                            <br>
+                                        
+                                            <p> Most Predictive Features for GNI in country income groups: </p> 
+                                            <ul id="myUL">
+                                                <li><span class="caretToggle">High Income</span>
+                                                  <ul class="nestedToggle">
+                                                  
+                                                   <li>  1. Ratio of young literate females to males (% ages 15-24)    </li>   
+                                                    <li>2. Literacy rate, youth male (% of males ages 15-24)          </li>  
+                                                        <li>3. Literacy rate, youth total (% of people ages 15-24)        </li>   
+                                                            <li>4. Literacy rate, adult male (% of males ages 15 and above)  </li>    
+                                                 
+                                                  </ul>
+                                                </li>
+                                                <li><span class="caretToggle">Upper-Middle
+ Income                                                 </span>
+                                                    <ul class="nestedToggle">
+                                                        <li>   1. Ratio of school attendance of orphans to school attendance of non-orphans ages 10-14  </li>    
+                                                            <li> 2. School enrollment, tertiary (% gross)                                                    </li> 
+                                                        <li> 3. School enrollment, tertiary, female (% gross)                                           </li> 
+                                                        <li>  4. Literacy rate, adult male (% of males ages 15 and above)        </li> 
+                                                          
+                                                   
+                                                    </ul>
+                                                  </li>
+                                                  <li><span class="caretToggle">Lower-Middle Income</span>
+                                                    <ul class="nestedToggle">
+                                                  
+                                                        <li> 1. Literacy rate, youth male (% of males ages 15-24)       </li> 
+                                                            <li>2. Literacy rate, youth total (% of people ages 15-24)     </li> 
+                                                                <li>3. Public spending on education, total (% of GDP)          </li> 
+                                                                    <li>4. School enrollment, secondary, female (% gross)          </li> 
+
+  
+                                                   
+                                                    </ul>
+                                                  </li>
+                                                <li><span class="caretToggle">Lower Income </span>
+                                                    <ul class="nestedToggle">
+                                                  
+
+                                                        <li> 1. School enrollment, tertiary (% gross)   </li>            
+                                                            <li> 2. School enrollment, tertiary, female (% gross)    </li>   
+                                                                <li> 3. School enrollment, secondary (% gross)       </li>      
+                                                                    <li> 4. School enrollment, secondary, male (% gross)       </li> 
+
+  
+                                                   
+                                                    </ul>
+                                                  </li>
+
+                                              </ul>
+
+                                              
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!--/main col-->
+        </div>
+
+    </div>
+    <!--/.container-->
+
+    <br>
+    <footer class="container-fluid ">
+        <!-- <p class="text-right small">©2021 Anne Xu</p> -->
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Modal</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a dashboard layout for Bootstrap 4. This is an example of the Modal component which you
+                        can use to show content.
+                        Any content can be placed inside the modal and it can use the Bootstrap grid classes.</p>
+                    <p>
+                        <a href="https://www.codeply.com/go/KrUO8QpyXP" target="_ext">Grab the code at Codeply</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

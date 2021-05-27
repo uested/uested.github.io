@@ -1,0 +1,302 @@
+
+
+body{
+    background-color: #e8eae9    ;
+    font-family: 'Roboto', sans-serif !important;
+
+}
+
+.card{
+    /* border-radius:20px !important; */
+    border: none;
+}
+.card-number{
+    font-size:4em;
+    font-weight:700;
+    color: #2C5234;
+}
+
+
+
+/* ------------ MAIN COLORS */
+
+#sidebar{
+    background-color: #ffffff;
+}
+
+
+.bg-primary{
+    /* background-color: black !important; */
+
+
+    /* background-color: #2C5234 !important; */
+
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 61%, rgba(50,50,50,1) 100%);
+
+}
+
+
+.colorPalette{
+
+background-color: #1d2830 ;
+background-color: #2C5234 ;
+background-color: #0097A9 ;
+background-color: #62B5E5 ;
+background-color: #ffffff;
+
+
+}
+
+
+
+
+/* -------------------------SLIDER STYLING--------------  */
+
+#time-range p {
+    font-family:"Arial", sans-serif;
+    font-size:14px;
+    color:#333;
+}
+.ui-slider-horizontal {
+    height: 8px;
+    background: #D7D7D7;
+    border: 1px solid #BABABA;
+    box-shadow: 0 1px 0 #FFF, 0 1px 0 #CFCFCF inset;
+    clear: both;
+    margin: 8px 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: -1px;
+    height: 100%;
+}
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    height: 8px;
+    font-size: .7em;
+    display: block;
+    border: 1px solid #ffffff;
+    box-shadow: 0 1px 0 #62B5E5 inset;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+    /* background: #0097A9;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #62B5E5), color-stop(100%, #0097A9));
+    background-image: -webkit-linear-gradient(top, #62B5E5, #0097A9);
+    background-image: -moz-linear-gradient(top, #62B5E5, #0097A9);
+    background-image: -o-linear-gradient(top, #62B5E5, #0097A9);
+    background-image: linear-gradient(top, #62B5E5, #0097A9); */
+
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #62B5E5, #0097A9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #62B5E5, #0097A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.ui-slider .ui-slider-handle {
+    border-radius: 50%;
+    background: #F9FBFA;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #C7CED6), color-stop(100%, #F9FBFA));
+    background-image: -webkit-linear-gradient(top, #C7CED6, #F9FBFA);
+    background-image: -moz-linear-gradient(top, #C7CED6, #F9FBFA);
+    background-image: -o-linear-gradient(top, #C7CED6, #F9FBFA);
+    background-image: linear-gradient(top, #C7CED6, #F9FBFA);
+    width: 22px;
+    height: 22px;
+    -webkit-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
+    -moz-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
+    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
+    -webkit-transition: box-shadow .3s;
+    -moz-transition: box-shadow .3s;
+    -o-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    cursor: default;
+    border: none;
+    cursor: pointer;
+}
+.ui-slider .ui-slider-handle:after {
+    content:"";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -4px;
+    left: 50%;
+    margin-left: -4px;
+    background: #1d2830;
+    -webkit-box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;
+    -moz-box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 white;
+    box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.5em;
+    margin-left: -.6em;
+}
+.ui-slider a:focus {
+    outline:none;
+}
+
+
+ 
+
+
+#movieCard{
+    background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5234, #86BC25);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5234, #86BC25); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:50px;
+}
+
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caretToggle {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caretToggle/arrow with a unicode, and style it */
+  .caretToggle::before {
+    content: "\25B6";
+    color: #2e2c28;
+    display: inline-block;
+    font-size:20px;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caretToggle/arrow icon when clicked on (using JavaScript) */
+  .caretToggle-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nestedToggle {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caretToggle/arrow (with JavaScript) */
+  .activeToggle {
+    display: block;
+  }
+
+
+/* class applies to select element itself, not a wrapper element */
+.selectFeatureStyle {
+    display: block;
+    /* font-size: 14px; */
+    font-family: sans-serif;
+    margin:0;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+ 
+  }
+  .selectFeatureStyle::-ms-expand {
+    display: none;
+  }
+  .selectFeatureStyle:hover {
+    border-color: #888;
+  }
+  .selectFeatureStyle:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px #86BC25;
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+  }
+  
+  .selectFeatureStyle option {
+    font-weight:normal;
+  }
+  
+  .selectFeatureStyle:disabled:hover, .selectStyle[aria-disabled=true] {
+    border-color: #aaa;
+  }
+  
+/* class applies to select element itself, not a wrapper element */
+.selectStyle {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin:0;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+ 
+  }
+  .selectStyle::-ms-expand {
+    display: none;
+  }
+  .selectStyle:hover {
+    border-color: #888;
+  }
+  .selectStyle:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px #86BC25;
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+  }
+  
+  .selectStyle option {
+    font-weight:normal;
+  }
+  
+  .selectStyle:disabled:hover, .selectStyle[aria-disabled=true] {
+    border-color: #aaa;
+  }
+  
