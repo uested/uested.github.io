@@ -426,6 +426,16 @@ function changeCountry(inputCountry) {
 
         console.log(currData)
     } 
+    else if (inputCountry === 'Upper middle income') {
+        currData = ultData.filter(function (d) {
+            return d["Income Group"] === 'Upper middle income'
+        })
+    }   
+    else if (inputCountry === 'Lower middle income') {
+        currData = ultData.filter(function (d) {
+            return d["Income Group"] === 'Lower middle income'
+        })
+    }   
     else if (inputCountry === 'Low Income') {
         currData = ultData.filter(function (d) {
             return d["Income Group"] === 'Low income'
